@@ -3,12 +3,12 @@ import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
 
-function AppointmentTable() {
+function MedicalBillsTable() {
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
         <div className={`${styles["row"]} ${styles["mb-10"]}`}>
-          <h4 className={`${styles["table-heading"]}`}>Appointments</h4>
+          <h4 className={`${styles["table-heading"]}`}>Medical Bills</h4>
           <HashLink smooth to="/profile#top">
             <AppButton text="Back To Profile" icon="fad fa-user-circle" />
           </HashLink>
@@ -16,14 +16,11 @@ function AppointmentTable() {
         <table>
           <tr>
             <th>#</th>
-            <th>Visit Type</th>
-            <th>Clinician</th>
-            <th>Provider</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Duration</th>
-            <th>Comments</th>
-            <th>Insurance</th>
+            <th>Amount Due</th>
+            <th>Status</th>
+            <th>Physician</th>
+            <th>Description</th>
+            <th>Date of Service</th>
             <th>Actions</th>
           </tr>
           <tr>
@@ -33,9 +30,6 @@ function AppointmentTable() {
             <td>Stephanie Branch</td>
             <td>SOUTH MEDIC CENTER</td>
             <td>22/10/2022</td>
-            <td>30 min</td>
-            <td>ASAP</td>
-            <td>Check</td>
             <td>
               <AppButton text="Delete" icon="fas fa-trash-alt" />
             </td>
@@ -46,4 +40,4 @@ function AppointmentTable() {
   );
 }
 
-export default AppointmentTable;
+export default MedicalBillsTable;
