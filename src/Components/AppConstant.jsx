@@ -172,10 +172,6 @@ export const links = [
     exact: true,
   },
   {
-    link: "/aboutme",
-    text: "About",
-  },
-  {
     link: "/onlineServices",
     text: "Online Services",
     dropdown: [
@@ -196,32 +192,36 @@ export const links = [
       // },
     ],
   },
+  // {
+  //   link: "/works",
+  //   text: "Works",
+  //   keyword: true,
+  //   dropdown: [
+  //     {
+  //       link: "website",
+  //       text: "Websites",
+  //     },
+  //     {
+  //       link: "webapps",
+  //       text: "Web Apps",
+  //     },
+  //     {
+  //       link: "mobile",
+  //       text: "Mobile Apps",
+  //     },
+  //     {
+  //       link: "hybrid",
+  //       text: "Hybrid",
+  //     },
+  //     {
+  //       link: "all",
+  //       text: "All",
+  //     },
+  //   ],
+  // },
   {
-    link: "/works",
-    text: "Works",
-    keyword: true,
-    dropdown: [
-      {
-        link: "website",
-        text: "Websites",
-      },
-      {
-        link: "webapps",
-        text: "Web Apps",
-      },
-      {
-        link: "mobile",
-        text: "Mobile Apps",
-      },
-      {
-        link: "hybrid",
-        text: "Hybrid",
-      },
-      {
-        link: "all",
-        text: "All",
-      },
-    ],
+    link: "/about",
+    text: "About",
   },
   {
     link: "/contact",
@@ -349,9 +349,9 @@ export const services = [
 
 export const contactBoxes = [
   {
-    title: "Call Me",
-    text: "+91 1234567890",
-    link: "tel:123456789",
+    title: "Call Us (Toll Free)",
+    text: "1800 0000 1234",
+    link: "tel:180000001234",
     icon: "fad fa-phone",
     notBlank: true,
   },
@@ -361,12 +361,12 @@ export const contactBoxes = [
     link: "mailto:aryanverma2506@gmail.com",
     icon: "fad fa-envelope",
   },
-  {
-    title: "Visit Me",
-    text: "IIIT Sri City",
-    link: "https://goo.gl/maps/EmzLFogcUes8PEAd8",
-    icon: "fad fa-map-marker-alt",
-  },
+  // {
+  //   title: "Visit Me",
+  //   text: "IIIT Sri City",
+  //   link: "https://goo.gl/maps/EmzLFogcUes8PEAd8",
+  //   icon: "fad fa-map-marker-alt",
+  // },
 ];
 
 export const style = {
@@ -513,38 +513,38 @@ export const patientHospitalInpus = [
 
 export const gridservices = [
   {
-    img: "https://i.imgur.com/cvOIep6.jpg",
-    title: "Websites",
-    texts: ["Modern", "Style", "Responsive"],
-    text: "Breath taking Web designs for an amazing user experience.",
-    icon: "fad fa-browser",
-    link: "/works/websites",
+    img: require("../img/appointment.png"),
+    title: "Book Appointment",
+    // texts: ["Modern", "Style", "Responsive"],
+    // text: "Breath taking Web designs for an amazing user experience.",
+    icon: "fad fa-clipboard-list",
+    link: "/bookAppointment",
   },
   {
     reverse: true,
-    img: "https://i.imgur.com/XFJIHqG.png",
-    title: "Mobile Apps",
-    texts: ["UX", "Design", "UI"],
-    text: "Mobile Apps allow users to access your web app on their phone!",
-    icon: "fad fa-mobile",
+    img: require("../img/emr.png"),
+    title: "EMR",
+    // texts: ["UX", "Design", "UI"],
+    // text: "Mobile Apps allow users to access your web app on their phone!",
+    icon: "fad fa-files-medical",
     link: "/works/mobile",
   },
-  {
-    img: "https://i.imgur.com/6vC3i3o.png",
-    title: "Web Apps",
-    texts: ["UI", "UX", "Responsive"],
-    text: "Powerful Web Applications enhances user interference and productivity!",
-    icon: "fad fa-browser",
-    link: "/works/apps",
-  },
+  // {
+  //   img: "https://i.imgur.com/6vC3i3o.png",
+  //   title: "Web Apps",
+  //   texts: ["UI", "UX", "Responsive"],
+  //   text: "Powerful Web Applications enhances user interference and productivity!",
+  //   icon: "fad fa-browser",
+  //   link: "/works/apps",
+  // },
 
-  {
-    reverse: true,
-    img: "https://i.imgur.com/cs7dkFo.png",
-    title: "Hybrid",
-    texts: ["UI", "UX", "Responsive"],
-    text: "A Hybrid is a mix of a Web Application and a Website!",
-    link: "/works/hybrid",
-    icon: "fad fa-columns",
-  },
+  // {
+  //   reverse: true,
+  //   img: "https://i.imgur.com/cs7dkFo.png",
+  //   title: "Hybrid",
+  //   texts: ["UI", "UX", "Responsive"],
+  //   text: "A Hybrid is a mix of a Web Application and a Website!",
+  //   link: "/works/hybrid",
+  //   icon: "fad fa-columns",
+  // },
 ];

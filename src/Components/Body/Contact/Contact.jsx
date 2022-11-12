@@ -83,16 +83,16 @@ function Contact() {
       />
       <div className={`${styles["contact-info"]}`}>
         <div className={`${styles["contact-title"]}`} data-aos="flip-left">
-          <h2>Contact Me</h2>
+          <h2>Contact Us</h2>
           <small className={`${styles["graytext"]}`}>
-            Don't hesitate to reach out to me!
+            Don't hesitate to reach out to us!
           </small>
         </div>
         <div className={`${styles["contact-boxes"]}`}>{contactBoxesRow}</div>
         <div className={`${styles["contact-form"]}`} data-aos="zoom-out">
           <div className={`${styles["left-contact"]}`}>
             <Iconbox className={styles} icon="fad fa-envelope" />
-            <h2>Send Me a Message</h2>
+            <h2>Send Us a Message</h2>
           </div>
           <form onSubmit={sendEmail}>
             {formInputs}

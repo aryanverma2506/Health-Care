@@ -1,8 +1,8 @@
 import React from "react";
 
 import Bar from "./Bar";
-import TextArrow from "../../Reuseable/TextArrow/TextArrow";
-import Iconbox from "../../Reuseable/Icon/Iconbox";
+// import TextArrow from "../../Reuseable/TextArrow/TextArrow";
+// import Iconbox from "../../Reuseable/Icon/Iconbox";
 import { bars } from "../../AppConstant";
 import styles from "./AboutSection.module.css";
 
@@ -20,37 +20,37 @@ function AboutSection(props) {
     >
       {fulltext && (
         <>
-          <div className={`${styles["left-part"]}`} data-aos="fade-right">
+          {/* <div className={`${styles["left-part"]}`} data-aos="fade-right">
             <div className={`${styles["about-img"]}`}>
               <img src="https://i.imgur.com/b88Bw6C.jpg" alt="" />
             </div>
-          </div>
+          </div> */}
           <div
             className={`${styles["about-me"]} ${styles["aboutc"]} ${styles["about-cont"]}`}
             id="aboutc"
           >
-            <h3>About Me</h3>
+            <h3>About Us</h3>
             <p>
               Extremely motivated to constantly develop my skills and grow
               professionally. I am confident in my ability to come up with new
               ideas and enhance my UI and UX skills.
             </p>
           </div>
-          <div>
+          {/* <div>
             <div className={`${styles["about-me"]} ${styles["works"]}`}>
               <img src="https://i.imgur.com/Azabnhm.png" alt="" />
             </div>
-          </div>
+          </div> */}
         </>
       )}
-      {!fulltext && (
+      {/* {!fulltext && (
         <div className={`${styles["left-part"]}`} data-aos="fade-right">
           <div className={`${styles["about-img"]}`}>
             <img src="https://i.imgur.com/b88Bw6C.jpg" alt="" />
           </div>
         </div>
-      )}
-      <div className={`${styles["right-part"]}`} data-aos="fade-left">
+      )} */}
+      {/* <div className={`${styles["right-part"]}`} data-aos="fade-left">
         <div className={`${styles["about-cont"]}`}>
           {!fulltext && (
             <>
@@ -81,7 +81,7 @@ function AboutSection(props) {
             {barsRow}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
