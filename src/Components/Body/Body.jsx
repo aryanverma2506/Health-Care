@@ -14,6 +14,7 @@ import YouAreLost from "./404/YouAreLost";
 import Footer from "../Footer/Footer";
 import SignUp from "./SignUp/SignUp";
 import LogIn from "./LogIn/LogIn";
+import Profile from "./Profile/Profile";
 import BookAppointment from "./BookAppointment/BookAppointment";
 import { links, style, works } from "../AppConstant";
 import { ContextApp } from "../../ContextAPI";
@@ -48,6 +49,7 @@ function Body() {
           <Route path="/bookAppointment" element={<BookAppointment />} />
           {/* <Route path="/works" element={<Works />} /> */}
           {/* {worksRoutes} */}
+          <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
 
           <Route path="*" element={<YouAreLost />} />

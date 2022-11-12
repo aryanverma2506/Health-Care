@@ -181,7 +181,7 @@ export const links = [
         icon: "fad fa-browser",
       },
       {
-        link: "/onlineServices#webapps",
+        link: "/profile",
         text: "EMR",
         icon: "fad fa-browser",
       },
@@ -527,7 +527,7 @@ export const gridservices = [
     // texts: ["UX", "Design", "UI"],
     // text: "Mobile Apps allow users to access your web app on their phone!",
     icon: "fad fa-files-medical",
-    link: "/works/mobile",
+    link: "/profile",
   },
   // {
   //   img: "https://i.imgur.com/6vC3i3o.png",
