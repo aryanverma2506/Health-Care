@@ -19,20 +19,20 @@ function Slide(props) {
       }`}
     >
       <div>
-        <h3 data-aos={determineFade("right")}>
+        {/* <h3 data-aos={determineFade("right")}>
           <Iconbox icon={`fad fa-${slide.icon}`} />
           <span>{slide.title}</span>
-        </h3>
+        </h3> */}
         <p
           className={`${className["graytext"]}`}
           data-aos={determineFade("right")}
         >
-          <i className={`fad fa-${slide.texticon}`}></i>
+          {/* <i className={`fad fa-${slide.texticon}`}></i> */}
           <span>{slide.text}</span>
         </p>
-        <div className={`${className["btns"]}`} data-aos={determineFade("up")}>
+        {/* <div className={`${className["btns"]}`} data-aos={determineFade("up")}>
           <TextArrow link="/aboutme" />
-        </div>
+        </div> */}
       </div>
       <div data-aos={determineFade("left")}>
         <img src={slide.img} alt="" />

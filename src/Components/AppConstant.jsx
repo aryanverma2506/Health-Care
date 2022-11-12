@@ -1,3 +1,7 @@
+import home1 from "../img/home1.png";
+import home2 from "../img/home2.png";
+import home3 from "../img/home3.png";
+
 export const works = [
   {
     title: "ShopiumX",
@@ -172,24 +176,24 @@ export const links = [
     text: "About",
   },
   {
-    link: "/services",
-    text: "Services",
+    link: "/onlineServices",
+    text: "Online Services",
     dropdown: [
       {
-        link: "/services#websites",
-        text: "Websites",
+        link: "/bookAppointment",
+        text: "Book Appointment",
         icon: "fad fa-browser",
       },
       {
-        link: "/services#webapps",
-        text: "Web Apps",
+        link: "/onlineServices#webapps",
+        text: "EMR",
         icon: "fad fa-browser",
       },
-      {
-        link: "/services#mobileapps",
-        text: "Mobile Apps",
-        icon: "fad fa-mobile",
-      },
+      // {
+      //   link: "/onlineServices#mobileapps",
+      //   text: "Mobile Apps",
+      //   icon: "fad fa-mobile",
+      // },
     ],
   },
   {
@@ -235,22 +239,22 @@ export const socialIcons = [
 
 export const profile = [
   {
-    title: "Profile",
-    img: "https://i.imgur.com/EMcyIBn.png",
-    text: "Extremely motivated to constantly develop my skills and grow professionally. I am confident in my ability to come up with new ideas and enhance  my UI and UX skills.",
-    icon: "paint-brush",
+    // title: "Profile",
+    img: home1,
+    text: "The sweetest joy that anyone can have is the opportunity, in a loving way, to reach out and help each other.",
+    // icon: "paint-brush",
   },
   {
-    title: "Quotes",
-    img: "https://i.imgur.com/PldPiNS.png",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ante nec imperdiet venenatis. Aenean sed consectetur enim. Donec pretium erat ut varius varius.",
-    icon: "quote-left",
+    // title: "Quotes",
+    img: home2,
+    text: "The sweetest joy that anyone can have is the opportunity, in a loving way, to reach out and help each other.",
+    // icon: "quote-left",
   },
   {
-    title: "Inspiration",
-    img: "https://i.imgur.com/ih8gwVB.png",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ante nec imperdiet venenatis. Aenean sed consectetur enim. Donec pretium erat ut varius varius.",
-    icon: "lightbulb",
+    // title: "Inspiration",
+    img: home3,
+    text: "The sweetest joy that anyone can have is the opportunity, in a loving way, to reach out and help each other.",
+    // icon: "lightbulb",
   },
 ];
 
@@ -444,6 +448,66 @@ export const signupInputs = [
     value: "confirmPassword",
     name: "signup-hospital-confirm-password",
     type: "password",
+  },
+];
+
+export const abhaInputs = [
+  {
+    text: "ABHA Number",
+    value: "abhaNumber",
+    name: "abha-Number",
+    type: "tel",
+  },
+  {
+    text: "Date of Birth",
+    value: "abhaDOB",
+    name: "abha-dob",
+    type: "text",
+  },
+  {
+    text: "Mobile Number",
+    value: "mobileNumber",
+    name: "abha-mobile-number",
+    type: "tel",
+  },
+];
+
+export const patientHospitalInpus = [
+  {
+    text: "ABHA Number",
+    value: "abhaNumber",
+    name: "abha-Number",
+    type: "tel",
+  },
+  {
+    text: "Any previous Appointment",
+    value: "No",
+    name: "AppointmentDetails",
+    type: "radio",
+  },
+  {
+    text: "CGHS Card/Any other Discount Cards",
+    value: "CardNumber",
+    name: "Card-number",
+    type: "tel",
+  },
+  {
+    text: "Illness",
+    value: "illnessDescription",
+    name: "illness",
+    type: "text-area",
+  },
+  {
+    text: "Doctor's Name",
+    value: "doctorName",
+    name: "doctor-Name",
+    // type: "text",
+  },
+  {
+    text: "Doctor's Room Number",
+    value: "roomNumber",
+    name: "room-number",
+    type: "tel",
   },
 ];
 

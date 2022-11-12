@@ -5,6 +5,7 @@ import TypeOnLoad from "../../Reuseable/TypeOnLoad/TypeOnLoad";
 import CarouselCont from "../../Reuseable/Carousel/CarouselCont";
 import Banner from "../Banner/Banner";
 import AboutSection from "../AboutSection/AboutSection";
+import PatientABHA from "./PatientABHA/PatientABHA";
 import { profile } from "../../AppConstant";
 import styles from "./Home.module.css";
 import FeaturesSection from "../FeaturesSection/FeaturesSection";
@@ -31,18 +32,21 @@ function Home() {
       <>
         <div className={`${styles["title"]}`}>
           <h2>
-            <TypeOnLoad text={"Aryan Verma"} />
-            <small className={`${styles["graytext"]}`}>
+            <TypeOnLoad text={"Welcome"} />
+            {/* <small className={`${styles["graytext"]}`}>
               <TypeOnLoad text={"Web Developer"} />
-            </small>
+            </small> */}
           </h2>
           <div className={`${styles["hr"]}`}></div>
         </div>
-        <CarouselCont
-          slides={slidesrow}
-          setCurrentSlideShown={setCurrentSlideShown}
-          currentSlideShown={currentSlideShown}
-        />
+        <div className={`${styles["row"]}`}>
+          <CarouselCont
+            slides={slidesrow}
+            setCurrentSlideShown={setCurrentSlideShown}
+            currentSlideShown={currentSlideShown}
+          />
+          <PatientABHA />
+        </div>
       </>
     ),
   };
@@ -59,8 +63,8 @@ function Home() {
           backgroundAttachment: "fixed",
         }}
       />
-      <AboutSection />
-      <FeaturesSection />
+      {/* <AboutSection />
+      <FeaturesSection /> */}
     </div>
   );
 }
