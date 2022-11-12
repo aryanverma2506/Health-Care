@@ -15,9 +15,8 @@ import { HashLink } from "react-router-hash-link";
 function LogIn() {
   const { notifisystem } = useContext(ContextApp);
   const [formValues, setFormValues] = useState({
-    name: "",
     email: "",
-    msg: "",
+    password: "",
   });
 
   function sendEmail(event) {
