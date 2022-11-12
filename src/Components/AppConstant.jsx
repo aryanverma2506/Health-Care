@@ -390,6 +390,7 @@ export const contactInputs = [
     text: "Email",
     value: "email",
     name: "form-email",
+    type: "email",
   },
   {
     text: "Message",
