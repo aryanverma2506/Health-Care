@@ -7,6 +7,12 @@
   color: var(--gray-text);
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 .btns {
   display: flex;
   justify-content: flex-start;
@@ -87,16 +93,20 @@
   background-color: #000;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
   .slide p {
     font-size: 17px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .slide {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .slide .graytext span {
+    font-size: 14px;
   }
 
   .slide > div:last-of-type {
@@ -112,11 +122,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .slide .graytext span {
-    font-size: 14px;
-  }
-
+@media (max-width: 800px) {
   .slide img {
     display: none;
   }

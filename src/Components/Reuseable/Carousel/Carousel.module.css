@@ -1,9 +1,10 @@
 .carousel {
   height: 60vh;
+  width: 60%;
 }
 
 .carousel img {
-  width: 50%;
+  width: 80%;
   height: 100%;
   object-fit: contain;
 }
@@ -78,6 +79,11 @@
     display: none;
   }
 } */
+@media (max-width: 1000px) {
+  .carousel img {
+    width: 50%;
+  }
+}
 
 @media (max-width: 450px) {
   .carousel > :nth-of-type(2),

@@ -15,6 +15,7 @@ import Footer from "../Footer/Footer";
 import ProjectPage from "../Reuseable/ProjectPage/ProjectPage";
 import SignUp from "./SignUp/SignUp";
 import LogIn from "./LogIn/LogIn";
+import BookAppointment from "./BookAppointment/BookAppointment";
 import { links, style, works } from "../AppConstant";
 import { ContextApp } from "../../ContextAPI";
 import styles from "./Body.module.css";
@@ -44,7 +45,8 @@ function Body() {
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/onlineServices" element={<Services />} />
+          <Route path="/bookAppointment" element={<BookAppointment />} />
           <Route path="/works" element={<Works />} />
           {worksRoutes}
           <Route path="/contact" element={<Contact />} />
