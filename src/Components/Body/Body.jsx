@@ -13,6 +13,8 @@ import Contact from "./Contact/Contact";
 import YouAreLost from "./404/YouAreLost";
 import Footer from "../Footer/Footer";
 import ProjectPage from "../Reuseable/ProjectPage/ProjectPage";
+import SignUp from "./SignUp/SignUp";
+import LogIn from "./LogIn/LogIn";
 import { links, style, works } from "../AppConstant";
 import { ContextApp } from "../../ContextAPI";
 import styles from "./Body.module.css";
@@ -39,6 +41,8 @@ function Body() {
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />
