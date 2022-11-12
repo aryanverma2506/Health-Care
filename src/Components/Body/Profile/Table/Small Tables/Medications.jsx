@@ -15,10 +15,10 @@ function Medications() {
         </div>
         <table>
           <tr>
-            <th>Visit Type</th>
+            <th>Medication Name</th>
             <th>Date</th>
-            <th>Provider</th>
-            <th>Status</th>
+            <th>Frequency</th>
+            <th>Condition</th>
           </tr>
           <tr>
             <td>Urgent</td>

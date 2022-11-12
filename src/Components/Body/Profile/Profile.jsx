@@ -1,10 +1,10 @@
 import React from "react";
 import AppointmentTable from "./Table/Small Tables/AppointmentTable";
-import MedicalRecordsTable from "./Table/Small Tables/Medications";
+import MedicalRecordsTable from "./Table/Small Tables/MedicalRecordsTable";
 import MedicalBillsTable from "./Table/Small Tables/MedicalBillsTable";
+import Medications from "./Table/Small Tables/Medications";
 
 import "./Profile.css";
-import Medications from "./Table/Small Tables/Medications";
 
 function Profile() {
   return (

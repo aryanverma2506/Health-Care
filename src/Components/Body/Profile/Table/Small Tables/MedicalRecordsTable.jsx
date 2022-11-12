@@ -15,34 +15,29 @@ function MedicalRecordsTable() {
         </div>
         <table>
           <tr>
-            <th>Visit Type</th>
             <th>Date</th>
-            <th>Provider</th>
-            <th>Status</th>
+            <th>Name</th>
+            <th>Result</th>
           </tr>
           <tr>
             <td>Urgent</td>
             <td>22/10/2022</td>
             <td>Sri City Government Hospital</td>
-            <td>25/10/2022</td>
           </tr>
           <tr>
             <td>Follow-up</td>
             <td>11/11/2022</td>
             <td>Morar Hospital</td>
-            <td>15/11/2022</td>
           </tr>
           <tr>
             <td>Follow-up</td>
             <td>12/11/2022</td>
             <td>Apollo Spectra</td>
-            <td>18/11/2022</td>
           </tr>
           <tr>
             <td>Cronic care</td>
             <td>13/11/2022</td>
             <td>Reliance Healthcare</td>
-            <td>20/11/2022</td>
           </tr>
         </table>
       </div>
