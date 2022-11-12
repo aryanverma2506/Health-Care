@@ -25,7 +25,9 @@ function YouAreLost() {
             textShadow.y / 30
           }px 10px rgba(0, 0, 0, 0.33) `,
         }}
-      >{`4{}4`}</p>
+      >
+        4<i className={`fas fa-heartbeat`}></i>4
+      </p>
       <HashLink smooth to="/#top">
         <AppButton text="Back Home" icon="fad fa-home" />
       </HashLink>

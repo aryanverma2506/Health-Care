@@ -12,32 +12,32 @@ function Footer(props) {
       title: <Logo text1="Helping " text2="Hands" />,
       logo: true,
     },
+    // {
+    //   title: "Features",
+    //   links: services,
+    //   linkTitle: true,
+    // },
     {
-      title: "Features",
-      links: services,
-      linkTitle: true,
-    },
-    {
-      title: "Contact Me",
+      title: "Contact Us",
       links: contactBoxes,
       copy: true,
     },
-    {
-      title: "Portfolio",
-      links: [
-        {
-          text: "Github",
-          icon: "fab fa-github",
-          link: "https://github.com/Joshua131313",
-        },
-        {
-          text: "Dribbble",
-          icon: "fab fa-dribbble",
-          link: "https://dribbble.com/josh1231",
-        },
-      ],
-      blank: true,
-    },
+    // {
+    //   title: "Portfolio",
+    //   links: [
+    //     {
+    //       text: "Github",
+    //       icon: "fab fa-github",
+    //       link: "https://github.com/Joshua131313",
+    //     },
+    //     {
+    //       text: "Dribbble",
+    //       icon: "fab fa-dribbble",
+    //       link: "https://dribbble.com/josh1231",
+    //     },
+    //   ],
+    //   blank: true,
+    // },
     {
       title: "Policies",
       links: [
@@ -78,7 +78,7 @@ function Footer(props) {
       <div className={`${styles["bottom-content"]}`}>
         <div className={`${styles["rights-reserved"]}`}>
           <small className={`${styles["graytext"]}`}>
-            All Rights Reserved TurtleXDigital 2022, made by Aryan Verma
+            All Rights Reserved Helping Hands 2022, made by Helping Hand
           </small>
         </div>
         <div className={`${styles["social-icons"]}`}>{socialIconsRow}</div>

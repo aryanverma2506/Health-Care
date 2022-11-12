@@ -23,8 +23,8 @@ body {
   --theme-gradient: linear-gradient(
     90deg,
     rgba(1, 203, 153, 1) 0%,
-    rgba(6, 255, 211, 1) 63%,
-    rgba(221, 255, 239, 1) 100%
+    rgb(1, 203, 153) 63%,
+    rgb(1, 203, 153) 100%
   );
   --light: rgba(53, 182, 250, 0.067);
   --light-gray: rgb(248, 248, 248);

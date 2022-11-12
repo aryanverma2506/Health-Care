@@ -112,6 +112,19 @@
   min-height: 100px;
 }
 
+.contact-form .create-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-form .create-account a:hover {
+  text-decoration: underline;
+  color: var(--theme-color);
+  transition: all 0.3s;
+}
+
 .graytext {
   color: var(--gray-text);
 }

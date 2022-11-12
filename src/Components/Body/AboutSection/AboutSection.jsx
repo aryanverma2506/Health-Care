@@ -1,8 +1,8 @@
 import React from "react";
 
 import Bar from "./Bar";
-import TextArrow from "../../Reuseable/TextArrow/TextArrow";
-import Iconbox from "../../Reuseable/Icon/Iconbox";
+// import TextArrow from "../../Reuseable/TextArrow/TextArrow";
+// import Iconbox from "../../Reuseable/Icon/Iconbox";
 import { bars } from "../../AppConstant";
 import styles from "./AboutSection.module.css";
 
@@ -20,37 +20,56 @@ function AboutSection(props) {
     >
       {fulltext && (
         <>
-          <div className={`${styles["left-part"]}`} data-aos="fade-right">
+          {/* <div className={`${styles["left-part"]}`} data-aos="fade-right">
             <div className={`${styles["about-img"]}`}>
               <img src="https://i.imgur.com/b88Bw6C.jpg" alt="" />
             </div>
-          </div>
+          </div> */}
           <div
             className={`${styles["about-me"]} ${styles["aboutc"]} ${styles["about-cont"]}`}
             id="aboutc"
           >
-            <h3>About Me</h3>
+            <h3>About</h3>
             <p>
-              Extremely motivated to constantly develop my skills and grow
-              professionally. I am confident in my ability to come up with new
-              ideas and enhance my UI and UX skills.
+              Many times, people from rural regions do not get access to their
+              medical information and health benefits due to physical and
+              economic challenges. We will be potentially helping in bridging
+              that gap by keeping simplicity and ease of use as our main goal.
+            </p>
+            <p>
+              There are three user roles: Patient, Doctor and Front Office
+              Assistant.
+            </p>
+            <p>
+              <p>
+                <b>Patient</b> can view his/her appointments, medical bills, and
+                records, etc.
+              </p>
+              <p>
+                <b>Doctor</b> can view and edit patient charts, lab and test
+                results, medical records, appointments, etc.
+              </p>
+              <p>
+                <b>All front office</b> operations such as check-in, check-out,
+                collecting patient info, note allergies, etc.
+              </p>
             </p>
           </div>
-          <div>
+          {/* <div>
             <div className={`${styles["about-me"]} ${styles["works"]}`}>
               <img src="https://i.imgur.com/Azabnhm.png" alt="" />
             </div>
-          </div>
+          </div> */}
         </>
       )}
-      {!fulltext && (
+      {/* {!fulltext && (
         <div className={`${styles["left-part"]}`} data-aos="fade-right">
           <div className={`${styles["about-img"]}`}>
             <img src="https://i.imgur.com/b88Bw6C.jpg" alt="" />
           </div>
         </div>
-      )}
-      <div className={`${styles["right-part"]}`} data-aos="fade-left">
+      )} */}
+      {/* <div className={`${styles["right-part"]}`} data-aos="fade-left">
         <div className={`${styles["about-cont"]}`}>
           {!fulltext && (
             <>
@@ -81,7 +100,7 @@ function AboutSection(props) {
             {barsRow}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
