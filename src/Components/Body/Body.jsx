@@ -20,6 +20,9 @@ import { links, style, works } from "../AppConstant";
 import { ContextApp } from "../../ContextAPI";
 import styles from "./Body.module.css";
 
+// Clear This at end
+import AppointmentTable from "./Profile/Table/Big Tables/AppointmentTable";
+
 function Body() {
   const { scrolled, notifisystem } = useContext(ContextApp);
   // const worksRoutes = works?.map((work) => {
@@ -51,6 +54,7 @@ function Body() {
           {/* {worksRoutes} */}
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/appointmentTable" element={<AppointmentTable />} />
 
           <Route path="*" element={<YouAreLost />} />
         </Routes>

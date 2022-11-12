@@ -1,6 +1,10 @@
 import React from "react";
+import AppointmentTable from "./Table/Small Tables/AppointmentTable";
+import MedicalRecordsTable from "./Table/Small Tables/Medications";
+import MedicalBillsTable from "./Table/Small Tables/MedicalBillsTable";
+
 import "./Profile.css";
-import Tables from "./Table/Tables";
+import Medications from "./Table/Small Tables/Medications";
 
 function Profile() {
   return (
@@ -125,7 +129,10 @@ function Profile() {
                 </div>
               </div>
 
-              <Tables />
+              <AppointmentTable />
+              <MedicalRecordsTable />
+              <MedicalBillsTable />
+              <Medications />
             </div>
           </div>
         </div>
