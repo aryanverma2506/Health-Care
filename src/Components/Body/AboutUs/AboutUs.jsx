@@ -9,7 +9,7 @@ function AboutUs() {
     <div className={`${styles["about-me"]}`}>
       <BannerProps
         img="https://i.imgur.com/1PBKN6Z.png"
-        title="About Us"
+        title="About"
         text=""
       />
       <div className={`${styles["about-me-part"]}`}>

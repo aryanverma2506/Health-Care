@@ -29,11 +29,30 @@ function AboutSection(props) {
             className={`${styles["about-me"]} ${styles["aboutc"]} ${styles["about-cont"]}`}
             id="aboutc"
           >
-            <h3>About Us</h3>
+            <h3>About</h3>
             <p>
-              Extremely motivated to constantly develop my skills and grow
-              professionally. I am confident in my ability to come up with new
-              ideas and enhance my UI and UX skills.
+              Many times, people from rural regions do not get access to their
+              medical information and health benefits due to physical and
+              economic challenges. We will be potentially helping in bridging
+              that gap by keeping simplicity and ease of use as our main goal.
+            </p>
+            <p>
+              There are three user roles: Patient, Doctor and Front Office
+              Assistant.
+            </p>
+            <p>
+              <p>
+                <b>Patient</b> can view his/her appointments, medical bills, and
+                records, etc.
+              </p>
+              <p>
+                <b>Doctor</b> can view and edit patient charts, lab and test
+                results, medical records, appointments, etc.
+              </p>
+              <p>
+                <b>All front office</b> operations such as check-in, check-out,
+                collecting patient info, note allergies, etc.
+              </p>
             </p>
           </div>
           {/* <div>
