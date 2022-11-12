@@ -9,7 +9,7 @@ import styles from "./Footer.module.css";
 function Footer(props) {
   const columns = [
     {
-      title: <Logo text1="TurtleX" text2="Digital" />,
+      title: <Logo text1="Helping " text2="Hands" />,
       logo: true,
     },
     {

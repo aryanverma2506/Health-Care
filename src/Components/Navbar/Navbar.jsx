@@ -6,6 +6,7 @@ import NavbarLink from "./NavbarLink";
 import AppButton from "../Reuseable/Button/AppButton";
 import { ContextApp } from "../../ContextAPI";
 import styles from "./Navbar.module.css";
+import { HashLink } from "react-router-hash-link";
 
 function Navbar(props) {
   const { links } = props;
@@ -33,8 +34,14 @@ function Navbar(props) {
     <div
       className={`${styles["navbar"]} ${scrolled ? styles["navscrolled"] : ""}`}
     >
-      <Logo text1="TurtleX" text2="Digital" />
-      <div className={`${styles["links"]}`}>{linksrow}</div>
+      <Logo text1="Helping " text2="Hands" />
+
+      <div className={`${styles["links"]}`}>
+        {linksrow}
+        <HashLink smooth to="/login#top">
+          <AppButton text="Login" icon="fad fa-sign-in" />
+        </HashLink>
+      </div>
       <div
         className={`${styles["mobbtn"]} ${navmenu ? styles["open"] : ""}`}
         onClick={() => setNavmenu(!navmenu)}
@@ -59,7 +66,9 @@ function Navbar(props) {
               />
             );
           })}
-          <AppButton text="Learn More" icon="fal fa-arrow-right" />
+          <HashLink smooth to="/login#top">
+            <AppButton text="Login" icon="fad fa-sign-in" />
+          </HashLink>
         </div>
       </div>
     </div>
