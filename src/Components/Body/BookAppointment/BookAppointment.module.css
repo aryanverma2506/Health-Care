@@ -101,11 +101,7 @@
 .appointment-form .form .doctor-inputs::-webkit-scrollbar-thumb,
 .appointment-form .form .patient-inputs::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  /* background-image: linear-gradient(
-      135deg,
-      rgb(113, 183, 230),
-      rgb(102, 51, 153)
-    ); */
+  background-image: var(--theme-gradient);
 }
 
 .appointment-form .form .buttons {
@@ -329,7 +325,7 @@
   .options-container::-webkit-scrollbar-thumb {
   border-radius: 0 8px 8px 0;
   background-color: rgba(134, 183, 254);
-  background-image: var(--theme-color);
+  background-image: var(--theme-gradient);
 }
 
 .appointment-form .form .select-box .option,
