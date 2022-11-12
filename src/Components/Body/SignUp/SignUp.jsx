@@ -56,7 +56,7 @@ function SignUp() {
         type={input.type}
         value={formValues}
         setValue={setFormValues}
-        obg={input.value}
+        obj={input.value}
         textarea={input.textarea}
       />
     );
