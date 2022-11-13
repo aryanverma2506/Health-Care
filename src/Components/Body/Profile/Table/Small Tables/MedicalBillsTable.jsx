@@ -2,8 +2,20 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
-
+import { useState,useEffect } from "react";
+import http from '../../../../../http-common.js'
 function MedicalBillsTable() {
+  const [dbData,setdbData]=useState([])
+  useEffect(()=>{
+    http.get('/getpatients')
+    .then(res=>{
+      console.log(res.data[0].medical_bills);
+      setdbData(res.data[0].medical_bills)
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  },[])
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
@@ -19,26 +31,17 @@ function MedicalBillsTable() {
             <th>Amount</th>
             <th>Status</th>
           </tr>
-          <tr>
-            <td>Urgent</td>
-            <td>22/10/2022</td>
-            <td>Sri City Government Hospital</td>
-          </tr>
-          <tr>
-            <td>Follow-up</td>
-            <td>11/11/2022</td>
-            <td>Morar Hospital</td>
-          </tr>
-          <tr>
-            <td>Follow-up</td>
-            <td>12/11/2022</td>
-            <td>Apollo Spectra</td>
-          </tr>
-          <tr>
-            <td>Cronic care</td>
-            <td>13/11/2022</td>
-            <td>Reliance Healthcare</td>
-          </tr>
+          {
+            dbData.map((row)=>{
+              return(
+                <tr>
+                  <td>{row.Date_Of_Service}</td>
+                  <td>{row.Amount_Due}</td>
+                  <td>{row.Status}</td>
+                </tr>
+              )
+            })
+          }
         </table>
       </div>
     </div>

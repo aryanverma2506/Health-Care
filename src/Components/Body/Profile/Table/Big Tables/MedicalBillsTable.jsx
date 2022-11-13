@@ -2,8 +2,20 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
-
+import { useState,useEffect } from "react";
+import http from '../../../../../http-common.js'
 function MedicalBillsTable() {
+  const [dbData,setdbData]=useState([])
+  useEffect(()=>{
+    http.get('/getpatients')
+    .then(res=>{
+      console.log(res.data[0].medical_bills);
+      setdbData(res.data[0].medical_bills)
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  },[])
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
@@ -23,17 +35,23 @@ function MedicalBillsTable() {
             <th>Date of Service</th>
             <th>Actions</th>
           </tr>
-          <tr>
-            <td>0</td>
-            <td>Urgent</td>
-            <td>Dr. Branch</td>
-            <td>Stephanie Branch</td>
-            <td>SOUTH MEDIC CENTER</td>
-            <td>22/10/2022</td>
-            <td>
-              <AppButton text="Delete" icon="fas fa-trash-alt" />
-            </td>
-          </tr>
+          {
+            dbData.map((row,index)=>{
+              return(
+                <tr>
+                  <td>{index}</td>
+                  <td>{row.Amount_Due}</td>
+                  <td>{row.Status}</td>
+                  <td>{row.Physician}</td>
+                  <td>{row.Description}</td>
+                  <td>{row.Date_Of_Service}</td>
+                  <td>
+                    <AppButton text="Delete" icon="fas fa-trash-alt" />
+                  </td>
+                </tr>
+              )
+            })
+          }
         </table>
       </div>
     </div>

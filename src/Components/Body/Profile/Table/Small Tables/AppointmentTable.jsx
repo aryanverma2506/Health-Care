@@ -2,8 +2,21 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
+import { useState,useEffect } from "react";
+import http from '../../../../../http-common.js'
 
 function AppointmentTable() {
+  const [dbData,setdbData]=useState([])
+  useEffect(()=>{
+    http.get('/getpatients')
+    .then(res=>{
+      console.log(res.data[0].appointments);
+      setdbData(res.data[0].appointments)
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  },[])
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
@@ -20,30 +33,18 @@ function AppointmentTable() {
             <th>Provider</th>
             <th>Status</th>
           </tr>
-          <tr>
-            <td>Urgent</td>
-            <td>22/10/2022</td>
-            <td>Sri City Government Hospital</td>
-            <td>25/10/2022</td>
-          </tr>
-          <tr>
-            <td>Follow-up</td>
-            <td>11/11/2022</td>
-            <td>Morar Hospital</td>
-            <td>15/11/2022</td>
-          </tr>
-          <tr>
-            <td>Follow-up</td>
-            <td>12/11/2022</td>
-            <td>Apollo Spectra</td>
-            <td>18/11/2022</td>
-          </tr>
-          <tr>
-            <td>Cronic care</td>
-            <td>13/11/2022</td>
-            <td>Reliance Healthcare</td>
-            <td>20/11/2022</td>
-          </tr>
+          {
+            dbData.map((row)=>{
+              return(
+                <tr>
+                  <td>{row.Visite_Tyoe}</td>
+                  <td>{row.Date}</td>
+                  <td>{row.Provider}</td>
+                  <td>{row.Status}</td>
+                </tr>
+              )
+            })
+          }
         </table>
       </div>
     </div>

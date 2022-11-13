@@ -2,8 +2,20 @@ import React from "react";
 import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
-
+import { useState,useEffect } from "react";
+import http from '../../../../../http-common.js'
 function Medications() {
+  const [dbData,setdbData]=useState([])
+  useEffect(()=>{
+    http.get('/getpatients')
+    .then(res=>{
+      console.log(res.data[0].medications);
+      setdbData(res.data[0].medications)
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  },[])
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
@@ -26,20 +38,26 @@ function Medications() {
             <th>Renew By</th>
             <th>Actions</th>
           </tr>
-          <tr>
-            <td>0</td>
-            <td>Urgent</td>
-            <td>Dr. Branch</td>
-            <td>Stephanie Branch</td>
-            <td>SOUTH MEDIC CENTER</td>
-            <td>22/10/2022</td>
-            <td>30 min</td>
-            <td>ASAP</td>
-            <td>Check</td>
-            <td>
-              <AppButton text="Delete" icon="fas fa-trash-alt" />
-            </td>
-          </tr>
+          {
+            dbData.map((row)=>{
+              return(
+                <tr>
+                  <td>{row.Medication_Name}</td>
+                  <td>{row.Dose}</td>
+                  <td>{row.Frequency}</td>
+                  <td>{row.Quantity}</td>
+                  <td>{row.Refills}</td>
+                  <td>{row.Condition}</td>
+                  <td>{row.Provider}</td>
+                  <td>{row.Prescribed}</td>
+                  <td>{row.Renew_By}</td>
+                  <td>
+                    <AppButton text="Delete" icon="fas fa-trash-alt" />
+                  </td>
+                </tr>
+              )
+            })
+          }
         </table>
       </div>
     </div>

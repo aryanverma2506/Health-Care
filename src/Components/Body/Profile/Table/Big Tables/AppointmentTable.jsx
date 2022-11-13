@@ -1,9 +1,21 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
-
+import http from '../../../../../http-common.js'
 function AppointmentTable() {
+  const [dbData,setdbData]=useState([])
+  useEffect(()=>{
+    http.get('/getpatients')
+    .then(res=>{
+      console.log(res);
+      setdbData(res.data[0].appointments)
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+  },[])
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
@@ -26,20 +38,26 @@ function AppointmentTable() {
             <th>Insurance</th>
             <th>Actions</th>
           </tr>
-          <tr>
-            <td>0</td>
-            <td>Urgent</td>
-            <td>Dr. Branch</td>
-            <td>Stephanie Branch</td>
-            <td>SOUTH MEDIC CENTER</td>
-            <td>22/10/2022</td>
-            <td>30 min</td>
-            <td>ASAP</td>
-            <td>Check</td>
-            <td>
-              <AppButton text="Delete" icon="fas fa-trash-alt" />
-            </td>
-          </tr>
+          {
+            dbData.map((row,index)=>{
+              return(
+                <tr>
+                  <td>{index}</td>
+                  <td>{row.Visite_Tyoe}</td>
+                  <td>{row.Clinician}</td>
+                  <td>{row.Provider}</td>
+                  <td>{row.Location}</td>
+                  <td>{row.Date}</td>
+                  <td>{row.Duration} min</td>
+                  <td>{row.Comments}</td>
+                  <td>{row.Insurance?"Check":"Uncheck"}</td>
+                  <td>
+                    <AppButton text="Delete" icon="fas fa-trash-alt" />
+                  </td>
+                </tr>
+              )
+            })
+          }
         </table>
       </div>
     </div>
