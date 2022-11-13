@@ -1,8 +1,8 @@
 .profileBody {
-  padding-top: 70px;
+  margin-top: 70px;
   color: #1a202c;
   text-align: left;
-  background-color: #e2e8f0;
+  background-image: url("https://i.imgur.com/n743WDX.png");
 }
 
 .main-body {
@@ -28,7 +28,15 @@
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.floatEffect {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.profuImg {
+  border: 1px solid rgb(1, 203, 153);
 }
 
 .gutters-sm {
@@ -36,8 +44,8 @@
   margin-left: -8px;
 }
 
-.gutters-sm > .col,
-.gutters-sm > [class*="col-"] {
+.gutters-sm>.col,
+.gutters-sm>[class*="col-"] {
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -69,9 +77,19 @@
 }
 
 .list-group-item:hover {
-  background-color: rgb(244, 250, 253);
+  background-color: rgba(15, 164, 127, 0.25);
 }
 
 .sidebarActive {
-  background-color: rgb(205, 228, 239);
+  background-color: rgba(1, 203, 152, 0.5);
+}
+
+#profileDiv {
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profileHeading {
+  color: rgb(23, 162, 184);
+  margin: 1rem 0 0 1.5rem;
 }
