@@ -3,27 +3,27 @@ import { HashLink } from "react-router-hash-link";
 import AppButton from "../../../../Reuseable/Button/AppButton";
 import styles from "./Tables.module.css";
 
-function AppointmentTable() {
+function Medications() {
   return (
     <div className={`${styles["table"]}`}>
       <div className={`${styles["table-card"]}`}>
         <div className={`${styles["row"]} ${styles["mb-10"]}`}>
-          <h4 className={`${styles["table-heading"]}`}>Appointments</h4>
+          <h4 className={`${styles["table-heading"]}`}>Medications</h4>
           <HashLink smooth to="/profile#top">
             <AppButton text="Back To Profile" icon="fad fa-user-circle" />
           </HashLink>
         </div>
         <table>
           <tr>
-            <th>#</th>
-            <th>Visit Type</th>
-            <th>Clinician</th>
+            <th>Medication Name</th>
+            <th>Dose</th>
+            <th>Frequency</th>
+            <th>Quantity</th>
+            <th>Refills</th>
+            <th>Condition</th>
             <th>Provider</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Duration</th>
-            <th>Comments</th>
-            <th>Insurance</th>
+            <th>Prescribed</th>
+            <th>Renew By</th>
             <th>Actions</th>
           </tr>
           <tr>
@@ -46,4 +46,4 @@ function AppointmentTable() {
   );
 }
 
-export default AppointmentTable;
+export default Medications;

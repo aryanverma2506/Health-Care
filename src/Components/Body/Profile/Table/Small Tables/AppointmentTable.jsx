@@ -9,7 +9,7 @@ function AppointmentTable() {
       <div className={`${styles["table-card"]}`}>
         <div className={`${styles["row"]} ${styles["mb-10"]}`}>
           <h4 className={`${styles["table-heading"]}`}>Appointments</h4>
-          <HashLink smooth to="/appointmentTable">
+          <HashLink smooth to="/appointmentTable#top">
             <AppButton text="Browse All" icon="fas fa-browser" />
           </HashLink>
         </div>

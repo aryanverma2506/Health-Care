@@ -9,7 +9,7 @@ function MedicalRecordsTable() {
       <div className={`${styles["table-card"]}`}>
         <div className={`${styles["row"]} ${styles["mb-10"]}`}>
           <h4 className={`${styles["table-heading"]}`}>Medical Records</h4>
-          <HashLink smooth to="/appointmentTable">
+          <HashLink smooth to="/medicalRecordsTable#top">
             <AppButton text="Browse All" icon="fas fa-browser" />
           </HashLink>
         </div>

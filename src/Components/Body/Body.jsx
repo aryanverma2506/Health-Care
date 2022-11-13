@@ -18,10 +18,13 @@ import Profile from "./Profile/Profile";
 import BookAppointment from "./BookAppointment/BookAppointment";
 import { links, style, works } from "../AppConstant";
 import { ContextApp } from "../../ContextAPI";
+import AppointmentTable from "./Profile/Table/Big Tables/AppointmentTable";
+import MedicalBillsTable from "./Profile/Table/Big Tables/MedicalBillsTable";
+import MedicalRecordsTable from "./Profile/Table/Big Tables/MedicalRecordsTable";
+import Medications from "./Profile/Table/Big Tables/Medications";
 import styles from "./Body.module.css";
 
 // Clear This at end
-import AppointmentTable from "./Profile/Table/Big Tables/AppointmentTable";
 
 function Body() {
   const { scrolled, notifisystem } = useContext(ContextApp);
@@ -55,6 +58,12 @@ function Body() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointmentTable" element={<AppointmentTable />} />
+          <Route path="/medicalsBills" element={<MedicalBillsTable />} />
+          <Route
+            path="/medicalRecordsTable"
+            element={<MedicalRecordsTable />}
+          />
+          <Route path="/medications" element={<Medications />} />
 
           <Route path="*" element={<YouAreLost />} />
         </Routes>
