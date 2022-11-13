@@ -1,25 +1,34 @@
-import React from "react";
-import AppointmentTable from "./Table/Small Tables/AppointmentTable";
-import MedicalRecordsTable from "./Table/Small Tables/MedicalRecordsTable";
-import MedicalBillsTable from "./Table/Small Tables/MedicalBillsTable";
-import Medications from "./Table/Small Tables/Medications";
-
+import React, { useState } from "react";
 import "./Profile.css";
+import AppointmentTable from './Table/Small Tables/AppointmentTable';
+import MedicalBillsTable from './Table/Small Tables/MedicalBillsTable';
+import MedicalRecordsTable from './Table/Small Tables/MedicalRecordsTable';
+import Medications from './Table/Small Tables/Medications';
 
-function Profile() {
+function Profile () {
+  const [current, setCurrent] = useState('profile');
+
+  function handleClick (s) {
+    document.getElementById(current)?.classList.remove("sidebarActive");
+    document.getElementById(`${current}Div`)?.setAttribute("style", "display:none");
+    setCurrent(s);
+    document.getElementById(s)?.classList.add("sidebarActive");
+    document.getElementById(`${s}Div`)?.removeAttribute("style");
+  }
+
   return (
     <div className="profileBody">
       <div className="container">
         <div className="main-body">
-          <div className="row gutters-sm">
-            <div className="col-md-4 mb-3">
-              <div className="card">
+          <div className="row gutters-sm mt-4">
+            <div className="col-md-4 mb-4">
+              <div className="card floatEffect">
                 <div className="card-body">
                   <div className="d-flex flex-column align-items-center text-center">
                     <img
                       src="https://bootdey.com/img/Content/avatar/avatar7.png"
                       alt="Admin"
-                      className="rounded-circle"
+                      className="rounded-circle profuImg"
                       width="150"
                     />
                     <div className="mt-3">
@@ -28,62 +37,77 @@ function Profile() {
                       <p className="text-muted font-size-sm">
                         IIIT Sri City, Chittoor, A.P.
                       </p>
-                      <button className="btn btn-primary">Edit</button>&nbsp;
-                      <button className="btn btn-outline-primary">
-                        Message
-                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="card mt-3">
+
+              <div className="card mt-3 floatEffect">
                 <ul className="list-group list-group-flush">
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap sidebarActive">
+                  <button className="list-group-item d-flex justify-content-between align-items-center flex-wrap sidebarActive" id='profile' onClick={() => handleClick('profile')}>
                     <h6 className="mb-0 imageAdjust">
                       <img
+                        // @ts-ignore
                         src={require("../../../img/user.png")}
                         alt=""
                         className="profilePageProfImg"
                       />{" "}
                       Profile
                     </h6>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  </button>
+                  <button className="list-group-item d-flex justify-content-between align-items-center flex-wrap" id='appointment'
+                    onClick={() => handleClick('appointment')}>
                     <h6 className="mb-0 imageAdjust">
                       <img
+                        // @ts-ignore
                         src={require("../../../img/medical-appointment.png")}
                         alt=""
                         className="profilePageAppoinImg"
                       />{" "}
                       Appointments
                     </h6>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0 imageAdjust">
-                      <img src={require("../../../img/bill.png")} alt="" />{" "}
-                      Medical Bills
-                    </h6>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  </button>
+                  <button className="list-group-item d-flex justify-content-between align-items-center flex-wrap" id='bills'
+                    onClick={() => handleClick('bills')}>
                     <h6 className="mb-0 imageAdjust">
                       <img
+                        // @ts-ignore
+                        src={require("../../../img/bill.png")} alt=""
+                      />{" "}
+                      Medical Bills
+                    </h6>
+                  </button>
+                  <button className="list-group-item d-flex justify-content-between align-items-center flex-wrap" id='records'
+                    onClick={() => handleClick('records')}>
+                    <h6 className="mb-0 imageAdjust">
+                      <img
+                        // @ts-ignore
                         src={require("../../../img/medical-record.png")}
                         alt=""
                       />{" "}
                       Medical Records
                     </h6>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  </button>
+                  <button className="list-group-item d-flex justify-content-between align-items-center flex-wrap" id='medicine'
+                    onClick={() => handleClick('medicine')}>
                     <h6 className="mb-0 imageAdjust">
-                      <img src={require("../../../img/medicine.png")} alt="" />{" "}
+                      <img
+                        // @ts-ignore
+                        src={require("../../../img/medicine.png")} alt=""
+                      />{" "}
                       Medications
                     </h6>
-                  </li>
+                  </button>
                 </ul>
               </div>
             </div>
+
+            {/* right side part */}
             <div className="col-md-8">
-              <div className="card mb-3">
+
+              {/* profile */}
+              <div className="card mb-3" id='profileDiv'>
+                <h4 className='profileHeading'>Profile</h4><hr />
                 <div className="card-body">
                   <div className="row">
                     <div className="col-sm-3">
@@ -118,21 +142,28 @@ function Profile() {
                       BH-1, IIIT Sri City, Chittoor, A.P.
                     </div>
                   </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <a className="btn btn-info " target="__blank" href="/">
-                        Edit
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              <AppointmentTable />
-              <MedicalRecordsTable />
-              <MedicalBillsTable />
-              <Medications />
+              {/* appointment table */}
+              <div id='appointmentDiv' style={{ display: 'none' }}>
+                <AppointmentTable />
+              </div>
+
+              {/* bill table */}
+              <div id='billsDiv' style={{ display: 'none' }}>
+                <MedicalBillsTable />
+              </div>
+
+              {/* records table */}
+              <div id='recordsDiv' style={{ display: 'none' }}>
+                <MedicalRecordsTable />
+              </div>
+
+              {/* medicine table */}
+              <div id='medicineDiv' style={{ display: 'none' }}>
+                <Medications />
+              </div>
             </div>
           </div>
         </div>
